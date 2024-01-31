@@ -1,0 +1,234 @@
+:root{
+    color-scheme: dark;
+    font-family: system-ui, sans-serif;
+}
+
+::-webkit-scrollbar{
+
+}
+
+body{
+    background-color: #222;
+    user-select: none;
+    
+}
+
+#menu-container{
+    width: 80%;
+    max-width: 500px;
+
+    margin: auto;
+    margin-top: 2em;
+    padding: .5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #333;
+    border: 4px solid #424242;
+
+}
+
+#tittle{margin: .5em 0;}
+
+#select-img-container, #select-difficulty-container{
+    width: 100%;
+    height: 100px;
+
+    padding: .5em;
+    margin-bottom: .5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    border: 4px solid #424242;
+}
+
+#input-img{
+    width: 100%;
+    height: 30px;
+
+    font-size: .9em;
+}
+
+#image-preview-container{
+    width: 100%;
+
+    padding: .5em;
+    margin-bottom: .5em;
+
+    border: 4px solid #424242;
+
+    position: relative;
+    
+}
+    #image-preview{
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+    }
+    #image-preview-grid{
+        width: 100%;
+        height: 100%;
+
+        padding: .5em;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    #image-preview-grid div{border: 2px solid #333;}
+
+#submit{
+    width: 100%;
+
+    padding: .5em;
+    margin-bottom: .5em;
+
+    font-weight: 900;
+    font-size: 1.2em;
+
+    
+}
+
+#pieces-grid-container{
+    width: 80%;
+    max-height: 150px;
+    height: 150px;
+    min-height: 54px;
+
+    margin: 2em auto;
+    padding: .5em;
+
+    display: none;
+    grid-template-columns: repeat(auto-fit, 70px);
+    grid-gap: 4px;
+
+    justify-content: center;
+
+    overflow-y: auto;
+
+    background-color: #333;
+    border: 4px solid #424242;
+
+
+}
+
+    .pieces-grid-item{
+        
+        width: 100%;
+    }
+
+    .pieces-grid-item:hover{
+
+    }
+
+
+#puzzle-grid-container{
+    background-color: #333;
+    border: 4px solid #424242;
+
+    padding: 4px;
+    margin: auto;
+
+    display: none;
+    grid-template-columns: repeat(auto,minMax(100px,1fr));
+    grid-template-rows: repeat(auto,minMax(100px,1fr));
+    grid-gap: 4px;
+}
+    .puzzle-grid-item{
+        background-color: #555;
+        transition: all .1s;
+
+
+    }
+    .puzzle-grid-item:hover{
+        
+
+    }
+    .puzzle-grid-item img{
+        height: 100%;
+        
+    } 
+        .puzzle-grid-item-100{
+            height: 100%;
+            width: 100%;
+        }  
+
+    .img-puzzle-grid-item{
+        src: url("");
+
+    }
+
+
+
+#canvas-test{
+
+}
+#canvas-new{
+    
+}
+
+
+@keyframes disappear {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes noGap {
+    0%{
+        grid-gap: 4px;
+    }
+    100%{
+        grid-gap: 0px;
+    }
+}
+
+#img-test{
+    min-width: 400px;
+    width: 400px;
+    max-width: 400px;
+
+    display: none;
+    opacity: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+@media (width > 300px) {
+    
+    #pieces-grid-container{
+        width: 95%;
+    }
+    .pieces-grid-item{
+
+    }
+}
+
+@media (width > 800px) {
+
+    #pieces-grid-container{
+        grid-template-columns: repeat(auto-fit, 120px);
+    }   
+}

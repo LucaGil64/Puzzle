@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" href="puzzle-icon.png">
+    <title>Puzzle</title>
+</head>
+<body>
+
+    <div id="menu-container">
+        <h1 id="tittle">PUZZLE</h1>
+        <div id="select-img-container">
+            <label for="select-your-image">Select your image:</label>
+            <form action="" id="form-image">
+                <input type="file" id="input-img" required accept="image/*">
+            </form>
+        </div>
+        <div id="select-difficulty-container">
+            <label for="select-the-difficulty">Select the difficulty:</label>
+            <select name="" id="select-difficulty" required form="form-image">
+                <option value="2">Easy 2X2</option>
+                <option value="4">Medium 4X4</option>
+                <option value="5">Hard 5X5</option>
+                <option value="8">Impossible 8X8</option>
+            </select>
+        </div>
+        <div id="image-preview-container">
+            <img id="image-preview" alt="Add an image">
+            <div id="image-preview-grid"></div>
+        </div>
+        <input id="submit" type="submit" value="PLAY" form="form-image">
+    </div>
+    
+    <div id="pieces-grid-container"></div>
+
+
+    <div id="puzzle-grid-container"></div>
+
+    <img src="Halloween-500x500.jpeg" alt="" id="img-test">
+
+    <script src="script.js"></script>
+</body>
+</html>
